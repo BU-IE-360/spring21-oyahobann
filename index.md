@@ -5,3 +5,6 @@
 
 ## HW1 (19.04.2021)
 [Here](files/HW1.html) is my HW1's html file and [Here](files/HW1.Rmd) is my HW1's rmd file.
+
+## HW2 (07.05.2021)
+[Here](files/HW2.html) is my HW2's html file and [Here](files/HW2.Rmd) is my HW2's rmd file.
