@@ -3759,6 +3759,7 @@ Approaching differently to each product is one of the strong sides of the model,
 
  Overall, it can be said that models work fine, deviation from the real values is not too big.
 
+You can reach my related code from [here](https://bu-ie-360.github.io/spring21-oyahobann/Files/Project_Group3.Rmd).
 # REFERENCES
 
 Lecture Notes
