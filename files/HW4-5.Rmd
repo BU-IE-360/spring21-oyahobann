@@ -2289,20 +2289,19 @@ fit3
 ```
  
  
- The best result I get is the model ARIMA(4,0,0)(0,0,1)[30] wiht lowest AIC. 
- 
+ The frequency = 30 give better results by comparing AIC values, lower AIC value. 
  
 ### Model with Regressors
-The regressors determined above i sused to imporve model. 
+The regressors determined above is  used to improve model. 
 
 ```{r}
 random <- ts(decomposed_monthly$random, frequency = 30)
-reg_arima <- arima(random, order= c(4,0,0), seasonal = c(0,0,1), xreg = xreg7 )
+reg_arima <- arima(random, order= c(1,0,1), seasonal= c(0,0,2), xreg = xreg7 )
 reg_arima
 
 ```
 
- The AIC decreased , the regressors improved the model. 
+ The AIC decreased , the regressors improved the model, the AIC value is lower.  
  
  
 ### Predictions
@@ -2343,9 +2342,10 @@ ggplot() + geom_line(data = product7[event_date %in% test_dates], aes(x= event_d
 
 
 ```
+
 ### Model evaluation 
 
- The error rates shows the arima model have gave better results by considering WMAPE
+ The error rates shows the arima model with regressors have gave better results by considering WMAPE
  
 ```{r}
 
@@ -2519,6 +2519,7 @@ print("the multiplicative model")
 ur.kpss(decompose(monthly, type = "mul")$random)
 
 ```
+
 The additive model is used for model construction since it is more stationary 
 
 ```{r, out.width= '33%'}
@@ -2539,7 +2540,7 @@ random= ts(decomposed_monthly$random, frequency = 30)
 fit3 <- auto.arima(random)
 fit3
 ```
-ARIMA(0,0,1)(0,0,1)[30] with zero mean fives the best AIC result by comparing frequencty 7 and 14. Therefore it is used for predcitions and regressor model.   
+ARIMA(0,0,1)(0,0,1)[30] with zero mean fives the best AIC result by comparing frequenty 7 and 14. Therefore it is used for predcitions and regressor model.   
 
 
 ## the Examination of Attirubutes
@@ -2650,7 +2651,7 @@ for(i in 3:length(testprediction8)){
 
 ```
 
-The arima model without regressors gives better results by comparing WMAPE. 
+The arima with regressors and arima model show the same performance in prediction data. 
 
 
 # Product 9 - TrendyolMilla Bikini 
@@ -2886,17 +2887,20 @@ random= ts(decomposed_monthly$random, frequency = 30)
 fit3 <- auto.arima(random)
 fit3
 ```
-the ARIMA(0,0,1)(0,0,1)[30] with zero mean  model gives lower AIC value, therefor it is used for regressive model. 
- 
+
+ARIMA(0,0,2)(0,0,2)[7] with zero mean gives the best AIC score, and it is used for arima regressor model. 
+
+
 ### Model with Regressors
 
 ```{r}
-random <- ts(decomposed_monthly$random, frequency = 30)
-reg_arima <- arima(random, order= c(0,0,1), seasonal = c(0,0,1), xreg = xreg8 )
+random <- ts(decomposed_monthly$random, frequency = 7)
+reg_arima <- arima(random, order= c(0,0,2), seasonal = c(0,0,2), xreg = xreg9 )
 reg_arima
 
 ```
-the AIC value i slowerr than arima mode, so it is improved model. 
+
+the AIC value is lower than arima mode, so it is improved model. 
 
 ### Predictions
 
@@ -2938,6 +2942,7 @@ for(i in 3:length(testprediction9)){
 }
 
 ```
+
 The arima model with no regressors gives better result in test data. 
 
 
