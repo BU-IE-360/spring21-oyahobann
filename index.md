@@ -13,4 +13,5 @@
 [Here](files/HW3-Oya.html) is my HW3's html file and [Here](files/HW3-Oya.Rmd) is my HW3's rmd file.
 
 ## Project (02.07.2021)
-[Here](files/Project_Group3.html) is my Project's html file and [Here](files/Project_Group3.Rmd) is my Project's rmd file.
+[Here](files/Project_Updated.html) is our Project's html file. 
+[Here](files/Project_Updated.Rmd) is our Project's rmd file.
