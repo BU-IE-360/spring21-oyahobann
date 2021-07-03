@@ -664,7 +664,7 @@ test <- product3[product3$event_date > as.Date("2021-06-23")&product3$event_date
 
 ```
 
-## PRODUCT 3 - Xiaomi Bluetooth Headphones
+# PRODUCT 3 - Xiaomi Bluetooth Headphones
 
 First of all, it's clear that the variance of data is very large, from now on, it can be continued with the logarithm of sold count. Below, you can see the actual plot and the plot with the values that are taken logarithms. At below,looking at the plots of the product; in line graph it can be observed that the sales have variance, in some dates the plot has peaks and also there might be a cyclical behaviour which is an indicator for seasonality. 
 
@@ -961,7 +961,7 @@ print(paste(" Weighted Mean Absolute Percentage Error : ",weighted_mape))
 Looking at the plot for Predictions vs Actual Sales, it can be said that the model captured the behaviour of the data but there is almost a constant difference between prediction and actual sales, that is probably why the WMAPE is high, in order to solve this issue, further investigation can be made.
 
 
-## Product 4 - 7061886
+# Product 4 - Fakir Vacuum Cleaner
 
 
 ```{r Get Data Product 4, include=FALSE,echo=FALSE}
@@ -1242,7 +1242,7 @@ print(paste(" Weighted Mean Absolute Percentage Error : ",weighted_mape))
 ```
 Looking at the plot for Predictions vs Actual Sales, it can be said that the model captured the behaviour of the data partly but it is not the best fitting, also it can be seen on the above plot that there is a peak at Mean Absolute Errors in June 25, this may be an outlier in the data, that may be the reason why the WMAPE is high, in order to solve this issue, further investigation can be made.
 
-## Product 5 - 31515569
+# Product 5 - TrendyolMilla Tights
 
 ```{r Get Data Product 5, include=FALSE,echo=FALSE}
 
